@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ryze Design System - Premium SaaS Aesthetic */
+
+@layer base {
+  :root {
+    /* Core palette - Clean whites and deep blacks */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    /* Cards and surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Brand orange - Strategic accent */
+    --primary: 18 89% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Soft secondary surfaces */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted tones for subtle elements */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Accent - Warm glow */
+    --accent: 18 89% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 18 89% 55%;
+    
+    --radius: 1rem;
+    
+    /* Custom Ryze tokens */
+    --glow-orange: 18 89% 55%;
+    --surface-elevated: 0 0% 100%;
+    --surface-subtle: 220 20% 98%;
+    --text-tertiary: 220 9% 60%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(18 89% 55% / 0.1), hsl(32 95% 55% / 0.05));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 99%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(18 89% 55%) 0%, hsl(28 89% 52%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 10% / 0.03);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 10% / 0.05), 0 2px 4px -2px hsl(220 13% 10% / 0.03);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 10% / 0.08), 0 4px 6px -4px hsl(220 13% 10% / 0.03);
+    --shadow-xl: 0 20px 25px -5px hsl(220 13% 10% / 0.1), 0 8px 10px -6px hsl(220 13% 10% / 0.05);
+    --shadow-glow: 0 0 40px -10px hsl(18 89% 55% / 0.3);
+    --shadow-card-hover: 0 25px 50px -12px hsl(220 13% 10% / 0.15);
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 18 89% 55%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 18 89% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 18 89% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 18 89% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 18 89% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 18 89% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium button styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium 
+           transition-all duration-300 ease-out
+           hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-foreground px-6 py-3 rounded-xl font-medium 
+           border border-border transition-all duration-300 ease-out
+           hover:bg-secondary hover:border-transparent;
+  }
+  
+  /* Card with elevation */
+  .card-elevated {
+    @apply bg-card rounded-2xl p-6 transition-all duration-500 ease-out;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .card-elevated:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  /* Section spacing */
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+  
+  /* Container max-width */
+  .container-narrow {
+    @apply max-w-6xl mx-auto px-6;
+  }
+  
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-cta);
+  }
+  
+  /* Subtle divider */
+  .divider-subtle {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+  
+  /* Glow effect */
+  .glow-orange {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Navbar blur */
+  .nav-blur {
+    @apply backdrop-blur-xl bg-background/80;
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+}
