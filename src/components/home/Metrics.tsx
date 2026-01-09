@@ -75,11 +75,9 @@ const Metrics = () => {
 
   return (
     <section className="section-padding relative overflow-hidden" ref={containerRef}>
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-orange-50/30 to-background pointer-events-none" />
       
       <div className="container-narrow relative">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -97,7 +95,6 @@ const Metrics = () => {
           </p>
         </motion.div>
 
-        {/* Metrics grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {metrics.map((metric, index) => (
             <motion.div
@@ -108,7 +105,6 @@ const Metrics = () => {
               className="relative group"
             >
               <div className="bg-card rounded-2xl p-8 border border-border text-center h-full transition-all duration-500 hover:shadow-card-hover hover:border-primary/20">
-                {/* Animated number */}
                 <motion.div
                   initial={{ scale: 0.8 }}
                   animate={isInView ? { scale: 1 } : {}}
@@ -130,7 +126,6 @@ const Metrics = () => {
                   {metric.description}
                 </p>
 
-                {/* Decorative element */}
                 <motion.div
                   initial={{ scaleX: 0 }}
                   animate={isInView ? { scaleX: 1 } : {}}
@@ -142,7 +137,6 @@ const Metrics = () => {
           ))}
         </div>
 
-        {/* AI decisions visual */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -159,7 +153,6 @@ const Metrics = () => {
                 to maximize performance. Every decision is logged and explained.
               </p>
               
-              {/* Decision log preview */}
               <div className="space-y-3">
                 {[
                   { action: "Paused underperforming ad", impact: "Saved $340/day" },
@@ -181,7 +174,6 @@ const Metrics = () => {
               </div>
             </div>
 
-            {/* Progress visualization */}
             <div className="space-y-6">
               {[
                 { label: "Campaign Health", value: 94, color: "bg-green-500" },

@@ -34,7 +34,6 @@ const Header = () => {
     >
       <div className="container-narrow">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link to="/" className="relative z-10">
             <motion.div
               whileHover={{ scale: 1.02 }}
@@ -48,7 +47,6 @@ const Header = () => {
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
@@ -65,7 +63,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Link
               to="/login"
@@ -84,7 +81,6 @@ const Header = () => {
             </motion.div>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden relative z-10 p-2 text-foreground"
@@ -94,7 +90,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div

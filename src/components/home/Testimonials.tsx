@@ -57,7 +57,6 @@ const Testimonials = () => {
   return (
     <section className="section-padding bg-secondary/30" ref={containerRef}>
       <div className="container-narrow">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -75,7 +74,6 @@ const Testimonials = () => {
           </p>
         </motion.div>
 
-        {/* Testimonial carousel */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -95,12 +93,10 @@ const Testimonials = () => {
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                {/* Quote */}
                 <p className="text-xl lg:text-2xl text-foreground leading-relaxed mb-8">
                   "{testimonials[current].quote}"
                 </p>
 
-                {/* Author */}
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
@@ -116,7 +112,6 @@ const Testimonials = () => {
                     </div>
                   </div>
                   
-                  {/* Metric highlight */}
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -132,7 +127,6 @@ const Testimonials = () => {
             </AnimatePresence>
           </div>
 
-          {/* Navigation */}
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={prev}
@@ -142,7 +136,6 @@ const Testimonials = () => {
               <ChevronLeft className="w-5 h-5 text-foreground" />
             </button>
             
-            {/* Dots */}
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button

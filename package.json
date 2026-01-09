@@ -1,8 +1,9 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "ryze-ai",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {"name": "Sundaram Katare"},
   "scripts": {
     "dev": "vite",
     "build": "vite build",

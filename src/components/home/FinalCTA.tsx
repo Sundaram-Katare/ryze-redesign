@@ -16,13 +16,10 @@ const FinalCTA = () => {
           transition={{ duration: 0.6 }}
           className="relative overflow-hidden"
         >
-          {/* Background card with gradient */}
           <div className="relative bg-gradient-to-br from-foreground to-slate-800 rounded-3xl p-12 lg:p-20 text-center">
-            {/* Decorative gradient orbs */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
             
-            {/* Content */}
             <div className="relative z-10">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -86,7 +83,6 @@ const FinalCTA = () => {
                 </Link>
               </motion.div>
               
-              {/* Trust badges */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}

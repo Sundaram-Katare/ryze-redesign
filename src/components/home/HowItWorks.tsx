@@ -45,9 +45,7 @@ const HowItWorks = () => {
           </p>
         </motion.div>
 
-        {/* Steps */}
         <div className="relative">
-          {/* Connection line - SVG */}
           <svg
             className="absolute top-24 left-0 right-0 hidden lg:block"
             viewBox="0 0 1200 100"
@@ -74,7 +72,6 @@ const HowItWorks = () => {
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
                 className="relative text-center"
               >
-                {/* Step number */}
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
@@ -93,7 +90,6 @@ const HowItWorks = () => {
                   <step.icon className="w-8 h-8 text-primary" />
                 </motion.div>
 
-                {/* Content */}
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {step.title}
                 </h3>

@@ -32,7 +32,7 @@ const Footer = () => {
     <footer className="bg-secondary/30 border-t border-border">
       <div className="container-narrow section-padding">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
-          {/* Brand Column */}
+          
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="inline-flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
@@ -45,7 +45,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Product Links */}
           <div>
             <h4 className="font-medium text-foreground mb-4">Product</h4>
             <ul className="space-y-3">
@@ -62,7 +61,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Links */}
           <div>
             <h4 className="font-medium text-foreground mb-4">Company</h4>
             <ul className="space-y-3">
@@ -79,7 +77,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources Links */}
           <div>
             <h4 className="font-medium text-foreground mb-4">Resources</h4>
             <ul className="space-y-3">
@@ -96,7 +93,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal Links */}
           <div>
             <h4 className="font-medium text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
@@ -114,7 +110,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Ryze. All rights reserved.
@@ -129,7 +124,7 @@ const Footer = () => {
               Twitter <ArrowUpRight className="w-3 h-3" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/get-ryze-ai/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"

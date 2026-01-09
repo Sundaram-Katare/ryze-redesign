@@ -91,7 +91,6 @@ const Features = () => {
               className="group"
             >
               <div className="h-full bg-card rounded-2xl p-6 border border-border transition-all duration-500 hover:shadow-card-hover hover:border-primary/20">
-                {/* Icon */}
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -100,7 +99,6 @@ const Features = () => {
                   <feature.icon className="w-6 h-6 text-primary" />
                 </motion.div>
 
-                {/* Content */}
                 <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {feature.title}
                 </h3>
